@@ -1,0 +1,170 @@
+/* General Styles */
+.home-about-section {
+  background-color: #111827;
+  color: white;
+  padding: 50px 0;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #a855f7;
+  text-align: center;
+}
+
+.description {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+  color: #e5e7eb;
+}
+
+.highlight {
+  color: #a78bfa;
+  font-weight: bold;
+}
+
+/* Media Section */
+.media-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.media-card {
+  width: 100%;
+  max-width: 400px;
+  background-color: #1f2937;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.media-card:hover {
+  transform: translateY(-5px);
+}
+
+.media-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #a78bfa;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #d1d5db;
+}
+
+/* Social Media */
+.social-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.social-text {
+  text-align: center;
+  color: #9ca3af;
+  margin-bottom: 20px;
+}
+
+.social-icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  font-size: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.telegram {
+  color: #0088cc;
+}
+
+.youtube {
+  color: #ff0000;
+}
+
+.tiktok {
+  color: black;
+}
+
+.instagram {
+  color: #e1306c;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .home-about-description h1 {
+    font-size: 2.2rem;
+  }
+
+  .home-about-body {
+    font-size: 1.15rem;
+  }
+
+  .media-card {
+    max-width: 350px;
+  }
+
+  .media-image {
+    height: 230px;
+  }
+
+  .media-card .card-title {
+    font-size: 1.4rem;
+  }
+
+  .home-about-social h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Large Devices (large desktops, 992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .home-about-description h1 {
+    font-size: 2.4rem;
+  }
+
+  .media-card {
+    max-width: 380px;
+  }
+}
+
+/* Extra Large Devices (extra large desktops, ≥1200px) */
+@media (min-width: 1200px) {
+  .home-about-description h1 {
+    font-size: 2.6rem;
+  }
+
+  .media-card {
+    max-width: 400px;
+  }
+}
+
+/* Ensure Bootstrap Grid Integrity */
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-xs-12,
+.col-md-4,
+.col-md-8,
+.col-md-12 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
