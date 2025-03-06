@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "react-bootstrap/Card";
 import { Container, Row, Col } from "react-bootstrap";
 import Type from "../Home/Type";
