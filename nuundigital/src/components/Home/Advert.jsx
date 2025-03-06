@@ -3,7 +3,7 @@ import { Modal, Button, Carousel, Card, Col } from "react-bootstrap";
 import adverts1 from "../../assets/adverts.jpg";
 import adverts2 from "../../assets/advert1.jpg";
 import adverts3 from "../../assets/advert2.jpg";
-import "./AdvertGallery.css"; 
+import "./advertgallery.css"; 
 
 function AdvertGallery() {
   const [show, setShow] = useState(false);
