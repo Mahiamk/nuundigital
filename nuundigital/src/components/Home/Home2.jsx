@@ -61,9 +61,10 @@ function Home2() {
             </Card>
           </Col>
 
-          <Col xs={12} md={4} className="media-box">
+          {/* <Col xs={12} md={4} className="media-box">
             <AdvertGallery />
-          </Col>
+          </Col> */}
+          <AdvertGallery />
         </Row>
 
         <Row>
