@@ -1,0 +1,18 @@
+.mapouter {
+  position: relative;
+  text-align: right;
+  width: 371px; /* Fixed width */
+  height: 242px; /* Fixed height */
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  width: 371px; /* Fixed width */
+  height: 242px; /* Fixed height */
+}
+
+.gmap_iframe {
+  width: 371px !important; /* Fixed width */
+  height: 242px !important; /* Fixed height */
+}
