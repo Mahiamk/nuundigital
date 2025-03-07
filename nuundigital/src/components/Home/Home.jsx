@@ -1,5 +1,5 @@
 import { Container, Row, Col, Button } from "react-bootstrap"
-import homeLogo from "../../assets/back.jpg"
+import homeLogo from "../../assets/back.mov"
 import Particle from '../Particle'
 import Home2 from "./Home2"
 

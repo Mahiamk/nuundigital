@@ -82,10 +82,10 @@ button:focus {
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: #1b1a2ea9 !important;
+  background-color: #b7b6d3a9 !important;
   transition: all 0.3s ease-out 0s !important;
-  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
-  backdrop-filter: blur(15px) !important;
+  box-shadow: 0px 1px 1px 0px rgba(161, 158, 175, 0.171) !important;
+  backdrop-filter: blur(1px) !important;
 }
 
 .navbar {
@@ -103,12 +103,12 @@ button:focus {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #d9d0de !important;
+  background-color: #f9f8fa !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
   margin-bottom: 5px !important;
-  transform: rotate(0deg) !important;
+  transform: rotate(360deg) !important;
   left: 0 !important;
   opacity: 1 !important;
 }
@@ -150,7 +150,7 @@ button:focus {
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
-    background-color: #3a3c45 !important;
+    background-color: #090909 !important;
     opacity: inherit !important;
   }
   .navbar-nav .nav-item a::after {
@@ -201,7 +201,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #c95bf5;
+  background: #093f25;
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -298,21 +298,21 @@ button:focus {
   width: 100% !important;
   font-family: 'TimesNewRoman', sans-serif !important;
   font-weight: 700 !important;
-  color: darkslategray !important;
+  color: rgb(90, 89, 15) !important;
 }
 
 .main-name {
-  color: #cd5ff8;
+  color: #414141;
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: #be6adf !important;
+  background-image: linear-gradient(to left, rgb(149, 132, 185), rgb(56, 14, 181));
   font-weight: 600 !important;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #b562d6 !important;
+  color: #17341c !important;
 }
 
 @media (max-width: 767px) {
@@ -438,7 +438,7 @@ button:focus {
 .icon-colour {
   color: #b809ed !important;
 }
-@media screen and (max-width: 1907px) {
+@media screen and (max-width: 767px) {
   .home-about-section {
     padding-top: 50px !important;
     padding-bottom: 50px !important;
