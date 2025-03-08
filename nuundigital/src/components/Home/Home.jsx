@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 import homeLogo from "../../assets/back.mov"
 import Particle from '../Particle'
 import Home2 from "./Home2"
@@ -14,7 +14,7 @@ function Homepage() {
           src={homeLogo}
           alt="home background"
           className="img-fluid"
-          style={{ width: "100vw", height: "100vh", objectFit: "cover", position: "absolute", top: 0, left: 0, zIndex: -1, transition: "transform 0.3s ease, opacity 0.3s ease", }}
+          style={{ width: "100%", height: "100vh", objectFit: "cover", position: "absolute", top: 0, left: 0, zIndex: -1, transition: "transform 0.3s ease, opacity 0.3s ease", }}
         />
         <Container fluid className="home-section" id="home">
           <Particle />
