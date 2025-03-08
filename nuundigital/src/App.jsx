@@ -11,6 +11,7 @@ import {
   Routes,
   Navigate
 } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Contact from "./components/Contact/Contact";
 import "./UI/style.css";
 import "./App.css";
@@ -32,6 +33,7 @@ function App() {
       <Pre load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/project" element={<Projects />} />
