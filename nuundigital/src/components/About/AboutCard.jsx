@@ -9,10 +9,10 @@ import "./AC.css"; // Import the updated CSS
 function AboutCard() {
   return (
     <Container>
-      <Type />
       <Container className="about-section">
+      <Type />
         <Container>
-          <p style={{textAlign: "justify", fontSize: "18px"}}>At NuunDigital Solution, we take pride in delivering high-quality digital solutions that meet the evolving needs of our clients. Founded in 2021 and <a href="https://maps.google.com/maps?q=8.54207,39.26934&z=14" target="_blank" rel="noopener noreferrer" className="location-link">located</a> on the first floor of the Soreti Building in Adama, our company is built on a commitment to excellence and customer satisfaction.
+          <p style={{textAlign: "justify", fontSize: "18px", paddingTop:"100px"}}>At NuunDigital Solution, we take pride in delivering high-quality digital solutions that meet the evolving needs of our clients. Founded in 2021 and <a href="https://maps.google.com/maps?q=8.54207,39.26934&z=14" target="_blank" rel="noopener noreferrer" className="location-link">located</a> on the first floor of the Soreti Building in Adama, our company is built on a commitment to excellence and customer satisfaction.
 We believe in providing innovative and reliable digital products that help businesses grow and thrive in today’s competitive market. Our dedication to quality and personalized service has earned us a strong reputation among our clients. At NuunDigital Solution, your success is our priority, and we are always ready to go the extra mile to ensure you get the best solutions tailored to your needs.</p>
         </Container>
         <div className="ourservices">
