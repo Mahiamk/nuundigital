@@ -1,17 +1,16 @@
 import { Container, Row, Col } from "react-bootstrap"
-import homeLogo from "../../assets/back.mov"
 import Particle from '../Particle'
 import Home2 from "./Home2"
 import './Homee.css'
 
 
-function Homepage() {
+function Homepage() {  
   return (
     <section>
       <Container fluid className="home-section" id="home" style={{ position: "relative", padding: 0 }}>
         <Particle />
         <img
-          src={homeLogo}
+          src="https://dac.digital/wp-content/uploads/2023/09/bg-video-plus.mp4"
           alt="home background"
           className="img-fluid"
           style={{ width: "100%", height: "100vh", objectFit: "cover", position: "absolute", top: 0, left: 0, zIndex: -1, transition: "transform 0.3s ease, opacity 0.3s ease", }}
