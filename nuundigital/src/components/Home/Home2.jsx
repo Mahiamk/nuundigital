@@ -30,7 +30,7 @@ function Home2() {
               <br />
               We are experienced in
               <i>
-                <b className="purple"> photography, decoration, banner design & printing, web developing and Advertising. </b>
+                <b className="purple"> media production, commercial video, film production, motion graphics, 3D animation, wedding, events, Advertising and Printing, brand identity, bill board, poster, banner, sticker, T-shirt, and Logo. </b>
               </i>
             </p>
           </Col>
@@ -77,7 +77,7 @@ function Home2() {
             <ul className="home-about-social-links">
               <li className="social-icons">
                 <a
-                  href="https://t.me/amkmahi"
+                  href="https://t.me/NUUNDIGITAL"
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
