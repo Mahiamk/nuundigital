@@ -81,11 +81,9 @@
   width: 100% !important;
   font-family: 'TimesNewRoman', sans-serif !important;
   font-weight: 700 !important;
-  color: rgb(90, 89, 15) !important;
 }
-
-.main-name {
-  color: #414141;
+.nuun{
+  color: gold !important;
 }
 
 .Typewriter__wrapper {

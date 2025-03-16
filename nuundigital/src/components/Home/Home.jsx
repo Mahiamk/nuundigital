@@ -1,10 +1,17 @@
 import { Container, Row, Col } from "react-bootstrap"
 import Particle from '../Particle'
+import { useNavigate } from "react-router-dom"
 import Home2 from "./Home2"
 import './Homee.css'
+import Booking from '../book/booking'
 
 
-function Homepage() {  
+function Homepage() {
+  const navigate = useNavigate();  
+  const handleBookClick = () => {
+    console.log("Book Now clicked!"); // Debug log
+    navigate("/booking"); // Navigate to booking page
+  };
   return (
     <section>
       <Container fluid className="home-section" id="home" style={{ position: "relative", padding: 0 }}>
@@ -20,15 +27,14 @@ function Homepage() {
           <Container className="home-content">
             <Row>
               <Col md={7} className="home-header">
-                <h1 style={{ paddingBottom: 15 }} className="heading">
+                <h1 className="heading">
                 Welcome to NuunDigital{" "}
-                  <span className="wave" role="img" aria-labelledby="wave">
-                    👋🏻
-                  </span>
                 </h1>
 
-
               </Col>
+              {/* <Col>
+                <button className="book" onClick={handleBookClick}>Book Now</button>
+              </Col> */}
                 <h1 className="heading-name">
                 Your one-stop solution for professional photography services. 
                 <br />
