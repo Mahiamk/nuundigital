@@ -12,15 +12,17 @@ const testimonials = [
 const TestimonialSection = () => {
   return (
     <section className="testimonial-section">
-      <h2 className="comment">What Our Clients Say</h2>
+        <h2 className="comment">What Our Clients Say</h2>
       <div className="testimonial-container">
         {testimonials.map((testimonial) => (
           <div key={testimonial.id} className="testimonial-card">
+            <div className="testimonial-title">
+              <h3>{testimonial.name}</h3>
+            </div>
             <div className="testimonial-stars">★★★★★</div>
             <p className="testimonial-text">&quot;{testimonial.review}&quot;</p>
             <div className="testimonial-profile">
               <img src={testimonial.image} alt={testimonial.name} className="testimonial-image" />
-              <span className="testimonial-name">{testimonial.name}</span>
             </div>
           </div>
         ))}
