@@ -4,12 +4,12 @@
   background-image: url('../../assets/testmonial.jpg');
   background-size: cover;
   background-position: center;
-  padding: 100px 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* Ensure content starts from the top */
   align-items: center; /* Center the content */
   min-height: 100vh;
+  margin-top: 90px;
 
 }
 .testimonial-bg {
@@ -18,7 +18,6 @@
 }
 .testimonial-container {
   margin-top: auto;
-  margin-bottom: -70px;
   display: flex;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
   grid-gap: 20px;
