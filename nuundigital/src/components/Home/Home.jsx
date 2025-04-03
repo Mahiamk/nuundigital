@@ -6,11 +6,6 @@ import './Homee.css'
 
 
 function Homepage() {
-  const navigate = useNavigate();  
-  const handleBookClick = () => {
-    console.log("Book Now clicked!"); // Debug log
-    navigate("/booking"); // Navigate to booking page
-  };
   return (
     <section>
       <Container fluid className="home-section" id="home" style={{ position: "relative", padding: 0 }}>
