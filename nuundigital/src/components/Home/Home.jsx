@@ -3,7 +3,6 @@ import Particle from '../Particle'
 import { useNavigate } from "react-router-dom"
 import Home2 from "./Home2"
 import './Homee.css'
-import Booking from '../book/booking'
 
 
 function Homepage() {
