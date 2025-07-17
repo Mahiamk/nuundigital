@@ -8,4 +8,27 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
+  server: {
+    port: 3000,
+    host: '0.0.0.0',
+    https: false,
+    cors: true,
+    strictPort: false,
+    open: true,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:5001',
+        changeOrigin: true,
+        secure: false,
+      },
+    },
+  },
+  preview: {
+    port: 4173,
+    host: '0.0.0.0',
+    https: false,
+  },
+  define: {
+    global: 'globalThis',
+  }
 })
