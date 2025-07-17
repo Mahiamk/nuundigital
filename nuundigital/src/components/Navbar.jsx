@@ -9,6 +9,7 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiOutlineSetting,
 } from "react-icons/ai";
 
 
@@ -34,8 +35,10 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
+        <Navbar.Brand href="/" className="d-flex align-items-center navbar-nd-logo">
+          <span className="nd-logo-n">N</span>
+          <span className="nd-logo-d">D</span>
+          <span className="nd-logo-graffiti"></span>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -86,6 +89,18 @@ function NavBar() {
                 <AiOutlineMail style={{ marginBottom: "2px" }} />
                 Contact
               </Nav.Link>
+            </Nav.Item>
+            
+            <Nav.Item>
+              {/* <Nav.Link
+                as={Link}
+                to="/admin/login"
+                onClick={() => updateExpanded(false)}
+                style={{ color: '#667eea', fontWeight: '600' }}
+              >
+                <AiOutlineSetting style={{ marginBottom: "2px" }} />
+                Admin
+              </Nav.Link> */}
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
