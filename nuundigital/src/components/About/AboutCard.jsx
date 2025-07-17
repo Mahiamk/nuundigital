@@ -5,74 +5,54 @@ import Photo from "../../assets/weeding.jpg";
 import adverts from "../../assets/adverts.jpg";
 import Video from "../../assets/weedingvideo.mp4";
 import "./AC.css"; // Import the updated CSS
+import { useEffect, useState } from "react";
 
 function AboutCard() {
+  const [animate, setAnimate] = useState(false);
+  useEffect(() => {
+    setTimeout(() => setAnimate(true), 100);
+  }, []);
   return (
-    <Container>
-      <Container className="about-section">
-      <Type />
-        <Container>
-          <p style={{textAlign: "justify", fontSize: "18px", paddingTop:"100px"}}>At NuunDigital Solution, we take pride in delivering high-quality digital solutions that meet the evolving needs of our clients. Founded in 2021 and <a href="https://maps.google.com/maps?q=8.54207,39.26934&z=14" target="_blank" rel="noopener noreferrer" className="location-link">located</a> on the first floor of the Soreti Building in Adama, our company is built on a commitment to excellence and customer satisfaction.
-We believe in providing innovative and reliable digital products that help businesses grow and thrive in today’s competitive market. Our dedication to quality and personalized service has earned us a strong reputation among our clients. At NuunDigital Solution, your success is our priority, and we are always ready to go the extra mile to ensure you get the best solutions tailored to your needs.</p>
-        </Container>
-        <div className="ourservices">
-         <h3>📸✨ Our Work & Inspiration 🎥📜</h3>
-
-        </div>
-
-
-        {/* 3-column grid layout for desktop, responsive to smaller screens */}
-        <Row className="justify-content-center">
-          {/* Photography Card */}
-          <Col md={6} lg={4} className="media-box">
-            <Card className="media-card">
-              <Card.Img variant="top" src={Photo} alt="Photography" className="media-image" />
-              <Card.Body>
-                <Card.Title>Photography</Card.Title>
-                <Card.Text>High-quality professional shots.</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          {/* Video Editing Card */}
-          <Col md={6} lg={4} className="media-box">
-            <Card className="media-card">
-              <video controls className="media-image">
-                <source src={Video} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-              <Card.Body>
-                <Card.Title>Video Editing</Card.Title>
-                <Card.Text>Creative and cinematic productions.</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          {/* Advertising Card */}
-          <Col md={6} lg={4} className="media-box">
-            <Card className="media-card">
-              <Card.Img variant="top" src={adverts} alt="Advertisement" className="media-image" />
-              <Card.Body>
-                <Card.Title>Advertisement 📝</Card.Title>
-                <Card.Text>
-                  - Always deliver more than expected.  
-                  - Passion meets professionalism.  
-                  - Capture, create, inspire.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={6} lg={4} className="media-box">
-            <Card className="media-card">
-              <Card.Img variant="top" src={Photo} alt="Photography" className="media-image" />
-              <Card.Body>
-                <Card.Title>Photography</Card.Title>
-                <Card.Text>High-quality professional shots.</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+    <Container className="about-hero-bg">
+      <div className="about-hero">
+        <h1 className="about-hero-title">Welcome to NuunDigital Studio</h1>
+        <p className="about-hero-sub">Where Creativity Meets Technology</p>
+      </div>
+      <Row className="about-cards-row justify-content-center">
+        {/* Photography Card */}
+        <Col md={6} lg={4} className="media-box">
+          <Card className={`media-card about-anim-fadein${animate ? " about-anim-in" : ""}`}>
+            <Card.Img variant="top" src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=600&q=80" alt="Photography" className="media-image" />
+            <Card.Body>
+              <Card.Title>Photography</Card.Title>
+              <Card.Text>High-quality professional shots that capture your story.</Card.Text>
+              <a href="#gallery" className="about-card-btn">See Gallery</a>
+            </Card.Body>
+          </Card>
+        </Col>
+        {/* Video Editing Card */}
+        <Col md={6} lg={4} className="media-box">
+          <Card className={`media-card about-anim-fadein about-anim-delay1${animate ? " about-anim-in" : ""}`}>
+            <Card.Img variant="top" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=600&q=80" alt="Video Editing" className="media-image" />
+            <Card.Body>
+              <Card.Title>Video Editing</Card.Title>
+              <Card.Text>Creative, cinematic productions for every occasion.</Card.Text>
+              <a href="#gallery" className="about-card-btn">See Gallery</a>
+            </Card.Body>
+          </Card>
+        </Col>
+        {/* Advertising Card */}
+        <Col md={6} lg={4} className="media-box">
+          <Card className={`media-card about-anim-fadein about-anim-delay2${animate ? " about-anim-in" : ""}`}>
+            <Card.Img variant="top" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=600&q=80" alt="Advertising" className="media-image" />
+            <Card.Body>
+              <Card.Title>Advertising</Card.Title>
+              <Card.Text>Passion meets professionalism. Capture, create, inspire.</Card.Text>
+              <a href="#gallery" className="about-card-btn">See Gallery</a>
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
     </Container>
   );
 }
