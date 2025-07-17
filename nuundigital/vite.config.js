@@ -17,7 +17,7 @@ export default defineConfig({
     open: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:5001',
+        target: 'https://nuundigital.onrender.com',
         changeOrigin: true,
         secure: false,
       },
