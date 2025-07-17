@@ -12,7 +12,6 @@ const testimonials = [
 const TestimonialSection = () => {
   return (
     <section className="testimonial-section">
-        <h2 className="comment">What Our Clients Say</h2>
       <div className="testimonial-container">
         {testimonials.map((testimonial) => (
           <div key={testimonial.id} className="testimonial-card">
