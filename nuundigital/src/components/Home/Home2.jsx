@@ -1,129 +1,76 @@
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react";
 import Photo from "../../assets/cam.jpg";
 import Video from "../../assets/weedingvideo.mp4";
-import Card from "react-bootstrap/Card";
-import {
-  AiOutlineYoutube,
-  AiFillInstagram,
-  AiFillTikTok,
-} from "react-icons/ai";
-import { FaTelegramPlane } from "react-icons/fa";
-import AdvertGallery from "./Advert";
+import AdvertImage from "../../assets/advert1.jpg";
 import TestimonialSection from "./Testimonial";
-import './home2.css'
+import { AiOutlineYoutube, AiFillInstagram, AiFillTikTok } from "react-icons/ai";
+import { FaTelegramPlane } from "react-icons/fa";
+import './home2.css';
 
 function Home2() {
   return (
-    <Container fluid className="home-about-section" id="about">
-      <Container>
-        <Row className="justify-content-center">
-          <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em", textAlign: "center" }}>
-              WE ARE <span className="purple"> DIGITAL </span> BRIDGE
-            </h1>
-            <p className="home-about-body">
-              At NuunDigital Solution, we connect innovation with success, transforming ideas into reality through cutting-edge digital solutions. As a dynamic and forward-thinking company, we specialize in creative design, advanced technology, and strategic marketing to help businesses thrive in the digital era.
-              <br />
-              <br />
-              <span><span className="purple">Our mission is simple:</span> to bridge the gap between brands and their audiences by delivering high-quality digital experiences that inspire, engage, and drive growth.</span>
-              <br />
-              <br />
-              We are experienced in
-              <i>
-                <b className="purple"> media production, commercial video, film production, motion graphics, 3D animation, wedding, events, Advertising and Printing, brand identity, bill board, poster, banner, sticker, T-shirt, and Logo. </b>
-              </i>
-            </p>
-          </Col>
-        </Row>
-
-        {/* Media Grid */}
-        <Row className="justify-content-center g-4" style={{ marginTop: "20px" }}>
-          <Col xs={12} md={4} className="media-box">
-            <Card className="media-card">
-              <Card.Img variant="top" src={Photo} alt="Sample Work" className="media-image" />
-              <Card.Body>
-                <Card.Title>Photography</Card.Title>
-                <Card.Text>High-quality professional shots.</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          <Col xs={12} md={4} className="media-box">
-            <Card className="media-card">
-              <video controls className="media-image">
+    <div className="home2-bg">
+      <section className="home2-hero">
+        <h1 className="home2-title">We Are Digital Bridge</h1>
+        <p className="home2-sub">Bridging brands and audiences with <b>innovation</b>, <b>creativity</b>, and <b>technology</b>.<br/>
+          <span className="home2-mission">Transforming ideas into reality through digital excellence.</span>
+        </p>
+      </section>
+      <section className="home2-media-section">
+        <div className="home2-media-grid">
+          <div className="home2-media-card home2-glass-card home2-fade-in-up">
+            <div className="home2-card-img-wrap">
+              <img src={Photo} alt="Photography" className="home2-media-img" />
+            </div>
+            <div className="home2-media-info">
+              <h3>Photography</h3>
+              <p>High-quality professional shots.</p>
+            </div>
+          </div>
+          <div className="home2-media-card home2-glass-card home2-fade-in-up" style={{ animationDelay: '0.12s' }}>
+            <div className="home2-card-img-wrap">
+              <video
+                className="home2-media-img"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              >
                 <source src={Video} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <Card.Body>
-                <Card.Title>Video Editing</Card.Title>
-                <Card.Text>Creative and cinematic productions.</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-
-          {/* <Col xs={12} md={4} className="media-box">
-            <AdvertGallery />
-          </Col> */}
-          <AdvertGallery />
-        </Row>
-
-        <Row>
-          <TestimonialSection />
-          <Col md={12} className="home-about-social">
-            <h1>FIND US ON</h1>
-            <p>
-              Feel free to <span className="purple">connect </span>with us
-            </p>
-            <ul className="home-about-social-links">
-              <li className="social-icons">
-                <a
-                  href="https://t.me/NUUNDIGITAL"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                  style={{ color: "blue" }}
-                >
-                  <FaTelegramPlane />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://youtube.com/mahikoTech"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                  style={{ color: "red" }}
-                >
-                  <AiOutlineYoutube />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.tiktok.com/in/anwarkoji4u/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                  style={{ color: "white" }}
-                >
-                  <AiFillTikTok />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/mammaye"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                  style={{ color: "pink" }}
-                >
-                  <AiFillInstagram />
-                </a>
-              </li>
-            </ul>
-          </Col>
-        </Row>
-      </Container>
-    </Container>
+            </div>
+            <div className="home2-media-info">
+              <h3>Video Editing</h3>
+              <p>Creative and cinematic productions.</p>
+            </div>
+          </div>
+          <div className="home2-media-card home2-glass-card home2-fade-in-up" style={{ animationDelay: '0.24s' }}>
+            <div className="home2-card-img-wrap">
+              <img src={AdvertImage} alt="Advertising" className="home2-media-img" />
+            </div>
+            <div className="home2-media-info">
+              <h3>Advertising</h3>
+              <p>Strategic marketing campaigns.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="home2-testimonial-section">
+        <TestimonialSection />
+      </section>
+      <section className="home2-social-section">
+        <h2>Find Us On</h2>
+        <p>Feel free to <span className="home2-accent">connect</span> with us</p>
+        <div className="home2-social-icons">
+          <a href="https://t.me/NUUNDIGITAL" target="_blank" rel="noreferrer" className="home2-social-icon telegram"><FaTelegramPlane /></a>
+          <a href="https://youtube.com/mahikoTech" target="_blank" rel="noreferrer" className="home2-social-icon youtube"><AiOutlineYoutube /></a>
+          <a href="https://www.tiktok.com/in/anwarkoji4u/" target="_blank" rel="noreferrer" className="home2-social-icon tiktok"><AiFillTikTok /></a>
+          <a href="https://www.instagram.com/mammaye" target="_blank" rel="noreferrer" className="home2-social-icon instagram"><AiFillInstagram /></a>
+        </div>
+      </section>
+    </div>
   );
 }
 export default Home2;
