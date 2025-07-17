@@ -221,9 +221,10 @@ button:focus {
 /* --------- */
 .footer {
   background-color: rgb(0, 0, 0);
-  bottom: 0 !important;
   padding-top: 40px !important;
-  padding-bottom: 50px !important ;
+  padding-bottom: 50px !important;
+  margin-top: auto !important;
+  width: 100% !important;
 }
 .footer-copywright {
   text-align: center !important;
@@ -518,4 +519,216 @@ button:focus {
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+.feedback-float-btn {
+  position: fixed;
+  right: 28px;
+  bottom: 32px;
+  z-index: 1200;
+  background: #38bdf8;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  box-shadow: 0 4px 24px rgba(56,189,248,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+.feedback-float-btn:hover {
+  background: #0ea5e9;
+  transform: scale(1.08);
+}
+
+.feedback-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(36, 42, 66, 0.32);
+  z-index: 1300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-modal {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(36, 42, 66, 0.18);
+  padding: 2.2rem 2rem 1.5rem 2rem;
+  min-width: 320px;
+  max-width: 95vw;
+  position: relative;
+  animation: fadeInModal 0.3s;
+}
+@keyframes fadeInModal {
+  from { opacity: 0; transform: translateY(30px) scale(0.97); }
+  to { opacity: 1; transform: none; }
+}
+.feedback-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.feedback-modal-close:hover {
+  color: #0ea5e9;
+}
+.feedback-modal-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: #23272f;
+  margin-bottom: 1.1rem;
+  text-align: center;
+}
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.feedback-form input,
+.feedback-form textarea {
+  border: 1.5px solid #bae6fd;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #f8fafc;
+  color: #23272f;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: #38bdf8;
+}
+.feedback-submit-btn {
+  background: #38bdf8;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.3rem;
+  transition: background 0.2s, transform 0.2s;
+}
+.feedback-submit-btn:hover {
+  background: #0ea5e9;
+  transform: scale(1.04);
+}
+
+@media (max-width: 600px) {
+  .feedback-modal {
+    min-width: 90vw;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .feedback-float-btn {
+    right: 12px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.1rem;
+  }
+}
+
+.logo-part {
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-right: 0.2rem;
+  line-height: 1;
+}
+.logo-part:first-child {
+  background: linear-gradient(90deg, #4f8cff 0%, #1e3c72 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.logo-part:last-child {
+  background: linear-gradient(90deg, #ffd700 0%, #ffb300 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-left: 0.2rem;
+}
+@media (max-width: 600px) {
+  .logo-part {
+    font-size: 1.3rem;
+  }
+}
+
+.navbar-nd-logo {
+  position: relative;
+  height: 4.2rem;
+  margin-right: 1rem;
+}
+.nd-logo-n, .nd-logo-d {
+  font-family: 'Rampart One', cursive, sans-serif;
+  font-weight: 900;
+  font-size: 4.2rem;
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: -0.08em;
+  margin-right: -0.18em;
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 0 #000, 4px 4px 8px #2228;
+}
+.nd-logo-n {
+  color: #fff;
+}
+.nd-logo-d {
+  color: #111;
+  margin-left: -0.12em;
+}
+.nd-logo-graffiti {
+  position: absolute;
+  left: 0.1em;
+  bottom: -0.45em;
+  width: 3.6em;
+  height: 1em;
+  background: repeating-linear-gradient(120deg, #fff 0 20%, #222 20% 40%, #bbb 40% 60%, transparent 60% 100%);
+  border-radius: 0.4em 0.7em 0.6em 0.5em;
+  opacity: 0.7;
+  filter: blur(1.5px);
+  z-index: 1;
+}
+@media (max-width: 600px) {
+  .nd-logo-n, .nd-logo-d {
+    font-size: 2.2rem;
+  }
+  .navbar-nd-logo {
+    height: 2.2rem;
+  }
+  .nd-logo-graffiti {
+    width: 1.8em;
+    height: 0.42em;
+    left: 0.05em;
+    bottom: -0.18em;
+  }
+}
+
+.navbar .nav-link, .sticky .nav-link {
+  color: #fff !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+.navbar .nav-link:hover, .sticky .nav-link:hover {
+  color: #ffd700 !important;
 }
