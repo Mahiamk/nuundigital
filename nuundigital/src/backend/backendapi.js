@@ -307,9 +307,14 @@ const startServer = async (port) => {
         resolve();
       }).on('error', (err) => {
         if (err.code === 'EADDRINUSE') {
-          console.log(`Port ${port} is busy, trying ${port + 1}...`);
+          const nextPort = port + 1;
+          if (nextPort < 65536) {
+            console.log(`Port ${port} is busy, trying ${nextPort}...`);
           server.close();
-          startServer(port + 1);
+            startServer(nextPort);
+          } else {
+            reject(new Error('No available ports found'));
+          }
         } else {
           reject(err);
         }
