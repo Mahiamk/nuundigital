@@ -5,15 +5,35 @@ import emailjs from '@emailjs/browser';
 const Contact = () => {
   const [isSubmitted, setIsSubmitted] = useState(false); // State to track submission status
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
 
-    // EmailJS send function
-    emailjs
-      .send(
+    try {
+      // Send to backend API first
+      const apiResponse = await fetch('http://localhost:5001/api/contacts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
+          phone: data.phone || '',
+          subject: 'Contact Form Submission',
+          message: data.message,
+          service: 'general'
+        })
+      });
+
+      if (!apiResponse.ok) {
+        throw new Error('Failed to save contact to database');
+      }
+
+      // Then send email via EmailJS
+      const emailResult = await emailjs.send(
         'service_gj9c6er', // service Id
         'template_m97wjka', // Template ID
         {
@@ -23,20 +43,17 @@ const Contact = () => {
           message: data.message,
         },
         '0uCvUgGf9P8-i0kWY' // Public key
-      )
-      .then(
-        (result) => {
-          console.log('Email sent successfully:', result.text);
+      );
+
+      console.log('Email sent successfully:', emailResult.text);
           setIsSubmitted(true); 
           form.reset(); 
           
           setTimeout(() => setIsSubmitted(false), 15000);
-        },
-        (error) => {
-          console.error('Email sending failed:', error.text);
+    } catch (error) {
+      console.error('Contact submission error:', error);
           alert('Failed to send message. Please try again later.');
         }
-      );
   };
 
   return (
